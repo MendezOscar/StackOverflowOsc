@@ -36,5 +36,10 @@ namespace StackOverflowOsc.Web.Controllers
 
             return View(models);
         }
+
+        public ActionResult AskQuestion()
+        {
+            return View(new AskQuestionModel());
+        } 
 	}
 }

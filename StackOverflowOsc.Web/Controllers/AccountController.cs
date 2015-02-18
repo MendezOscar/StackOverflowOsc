@@ -35,6 +35,10 @@ namespace StackOverflowOsc.Web.Controllers
         {
             return View(new AccountLoginModel());
         }
-        
+
+        public ActionResult Profile(AccountProfileModel modelProfile)
+        {
+            return View(new AccountProfileModel());
+        }
     }
 }

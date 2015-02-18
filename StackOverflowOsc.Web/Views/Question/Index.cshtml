@@ -42,10 +42,11 @@
             @Html.ActionLink(item.OwnerName, "Profile", "Account", new { id = item.OwnerId }, null)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id = item.QuestionId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.QuestionId })
+            @Html.ActionLink("Edit", "Edit", new {id = item.QuestionId}) |
+            @Html.ActionLink("Delete", "Delete", new {id = item.QuestionId})
         </td>
+        
     </tr>
 }
-
+@Html.ActionLink("Ask Question", "AskQuestion")
 </table>

@@ -10,7 +10,6 @@
 @using (Html.BeginForm()) 
 {
     @Html.AntiForgeryToken()
-    
     <div class="form-horizontal">
         <h4>AccountLoginModel</h4>
         <hr />
@@ -43,6 +42,7 @@
 
 <div>
     @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Profile", "Profile");
 </div>
 
 @section Scripts {
