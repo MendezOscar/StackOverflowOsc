@@ -16,12 +16,20 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("StackOverflowOsc", "Index", "Home", null, new { @class = "navbar-brand" })
+                @Html.ActionLink("StackOverflowOsc", "Index", "Question", null, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Register", "Register", "Account")</li>
-                    <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                    @if (Context.User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Profile", "Profile", "Account")</li>
+                        <li>@Html.ActionLink("LogOut", "LogOut", "Account")</li>
+                    }
+                    else
+                    {
+                     <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                        <li>@Html.ActionLink("Login", "Login", "Account")</li>                
+                    }
                 </ul>
             </div>
         </div>

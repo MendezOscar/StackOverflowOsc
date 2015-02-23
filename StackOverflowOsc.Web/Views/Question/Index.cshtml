@@ -1,4 +1,4 @@
-﻿@model IEnumerable<StackOverflowOsc.Web.Models.QuestionListModel>
+﻿@model System.Collections.Generic.IEnumerable<StackOverflowOsc.Web.Models.QuestionListModel>
 
 @{
     ViewBag.Title = "Index";
@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+@Html.ActionLink("Ask Question", "AskQuestion")
 </p>
 <table class="table">
     <tr>
@@ -30,7 +30,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.ActionLink(item.Tittle, "Detail", new{id=item.QuestionId})
+            @Html.ActionLink(item.Tittle, "ShowQuestion", new { id = item.QuestionId })
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Votes)
@@ -48,5 +48,5 @@
         
     </tr>
 }
-@Html.ActionLink("Ask Question", "AskQuestion")
+
 </table>

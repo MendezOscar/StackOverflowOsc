@@ -12,6 +12,7 @@ namespace StackOverflowOsc.Domain.Entities
 
         public Question()
         {
+            CreationDate = DateTime.Now;
             ID = Guid.NewGuid();
         }
 
